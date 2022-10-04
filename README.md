@@ -12,6 +12,15 @@ Generate your credentials by running the script:
 See the generated credentials by running the script:
 `grep . secret/*`
 
+The output will look something like this (where `x...x` will be your actual secrets):
+
+```
+secret/book.pat:xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+secret/sessionrelay.pat:xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+secret/shellrelay.pat:xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+secret/shutdown.pat:xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+
 ## Production usage
 
  Only do this if you understand the risks involved (you'll know if you know; if in doubt, don't). 
