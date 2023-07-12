@@ -13,6 +13,23 @@ Generate credentials for pair of instances (`dev`, `xx0`) by running the script:
 See the generated credentials 
 
 ```
+tree
+.
+├── create-credentials
+├── LICENSE
+├── README.md
+└── secret
+    └── app-example-org
+        ├── dev
+        │   ├── book.pat
+        │   ├── jump.pat
+        │   ├── project
+        │   └── relay.pat
+        └── xx0
+            ├── book.pat
+            ├── jump.pat
+            ├── project
+            └── relay.pat
 $ grep . secret/app-example-org/dev/* 
 secret/app-example-org/dev/book.pat:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 secret/app-example-org/dev/jump.pat:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
