@@ -1,25 +1,31 @@
 # credentials-example
-An example credentials repo - DO NOT USE IN PRODUCTION. 
+An example credentials repo
 
-You should carefully control access to your credentials, so this repo defaults to ignoring the generated credentials (see the advanced section below for how to change that). 
+This repo contains a script that will generate some example secrets for a pair of instances (`dev`, `xx0`) so as to show the directory structure expected by [admin-tools](https://github.com/practable/admin-tools). The secrets are not checked into this public repo for security. See below for production usage hints.
+
 
 ## Usage
 
-Generate your credentials by running the script:
+Generate credentials for pair of instances (`dev`, `xx0`) by running the script:
 
 `./create-credentials`
 
-See the generated credentials by running the script:
-`grep . secret/*`
-
-The output will look something like this (where `x...x` will be your actual secrets):
+See the generated credentials 
 
 ```
-secret/book.pat:xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
-secret/sessionrelay.pat:xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
-secret/shellrelay.pat:xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
-secret/shutdown.pat:xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+$ grep . secret/app-example-org/dev/* 
+secret/app-example-org/dev/book.pat:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+secret/app-example-org/dev/jump.pat:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+secret/app-example-org/dev/project:some-project-0000
+secret/app-example-org/dev/relay.pat:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+$ grep . secret/app-example-org/xx0/*
+secret/app-example-org/xx0/book.pat:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+secret/app-example-org/xx0/jump.pat:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+secret/app-example-org/xx0/project:some-project-0000
+secret/app-example-org/xx0/relay.pat:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
+
+You should carefully control access to your credentials, so this repo defaults to ignoring the generated credentials (see the advanced section below for how to change that). 
 
 ## Production usage
 
